@@ -30,7 +30,7 @@ export default class Command extends BaseCommand {
       return void M.reply(
         `🟨 *${this.client.util.capitalize(
           type
-        )}* 𝐈𝐬 𝐚𝐥𝐫𝐞𝐚𝐝𝐲 *𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝, !*`
+        )}* 𝐈𝐬 𝐚𝐥𝐫𝐞𝐚𝐝𝐲 𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝!`
       );
     if (type === "news") {
       await this.client.DB.group.updateOne(
