@@ -25,7 +25,7 @@ export default class Command extends BaseCommand {
     let text = "";
     const users = [];
     if (flags.includes("--group")) {
-      text += "👑 *GROUP LEADERBOARD* 👑";
+      text += "🌺 𝐆𝐑𝐎𝐔𝐏 𝐋𝐄𝐀𝐃𝐄𝐑𝐁𝐎𝐀𝐑𝐃 🌺";
       const members = await (
         await this.client.groupMetadata(M.from)
       ).participants;
