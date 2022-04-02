@@ -34,7 +34,7 @@ export default class Command extends BaseCommand {
         users.push(User);
       }
     } else {
-      text += "👑 *LEADERBOARD* 👑";
+      text += "🌺 𝐋𝐄𝐀𝐃𝐄𝐑𝐁𝐎𝐀𝐑𝐃 🌺";
       const Users = await this.client.DB.user.find();
       for (let i = 0; i < Users.length; i++) {
         const User = await this.client.getUser(Users[i].jid);
@@ -44,7 +44,7 @@ export default class Command extends BaseCommand {
     users.sort((a, b) => (a.Xp < b.Xp ? 1 : b.Xp < a.Xp ? -1 : 0));
     const place = users.findIndex((x: IUser) => x.jid === M.sender.jid);
     const placeOrdinal = await ordinal(place + 1);
-    if (place < 10) text += `\t*(You are in the ${placeOrdinal} place)*`;
+    if (place < 10) text += `\t*(𝑌𝑜𝑢 𝑎𝑟𝑒 𝑖𝑛 𝑡ℎ𝑒 ${placeOrdinal} 𝑝𝑙𝑎𝑐𝑒)*`;
     let n = 10;
     if (users.length < 10) n = users.length;
     for (let i = 0; i < n; i++) {
@@ -97,13 +97,13 @@ export default class Command extends BaseCommand {
       }
       const q = this.client.getContact(users[i].jid);
       const username = q.notify || q.vname || q.name || "User";
-      text += `🏮 *Username: ${username}*\n〽️ *Level: ${level}*\n⭐ *Exp: ${
+      text += `🦄 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞: ${username}\n🔖 𝐋𝐞𝐯𝐞𝐥: ${level}\n🍥 𝐄𝐱𝐩: ${
         exp || 0
-      }*\n💫 *Role: ${role}*`;
+      }\n💮 𝐑𝐨𝐥𝐞: ${role}`;
     }
     return void M.reply(
       await this.client.getBuffer(
-        "https://wallpapermemory.com/uploads/711/chitoge-kirisaki-wallpaper-full-hd-323316.jpg"
+        "https://www.linkpicture.com/q/1646053747862.jpg"
       ),
       MessageType.image,
       undefined,
