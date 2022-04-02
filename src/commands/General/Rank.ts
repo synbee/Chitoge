@@ -39,25 +39,25 @@ export default class Command extends BaseCommand {
 		const exp = (await this.client.getUser(user)).Xp;
 		let role: string;
 		if (exp < 500) {
-			role = "🌸 Citizen";
+			role = "🧿 Majin";
 		} else if (exp < 1000) {
-			role = "🔎 Cleric";
+			role = "🧚‍♀️ Fairy";
 		} else if (exp < 2000) {
-			role = "🔮 Wizard";
+			role = "♠️ Fallen Angel";
 		} else if (exp < 5000) {
-			role = "♦️ Mage";
+			role = "💥 Orc Disaster";
 		} else if (exp < 10000) {
-			role = "🎯 Noble";
+			role = "🛡️ True Hero";
 		} else if (exp < 25000) {
-			role = "✨ Elite";
+			role = "🩸 Vampire";
 		} else if (exp < 50000) {
-			role = "🔶️ Ace";
+			role = "⚡ Demon Peer";
 		} else if (exp < 75000) {
-			role = "🌀 Hero";
+			role = "🔥 Dragon";
 		} else if (exp < 100000) {
-			role = "💎 Supreme";
+			role = "🧧 Demon Lord";
 		} else {
-			role = "❄️ Mystic";
+			role = "🐉 True Dragon";
 		}
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		let level: number;
