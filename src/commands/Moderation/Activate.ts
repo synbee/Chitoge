@@ -42,7 +42,7 @@ export default class Command extends BaseCommand {
         { $push: { jids: M.from } }
       );
       return void M.reply(
-        `🔷 *${this.client.util.capitalize(type)}* 𝐢𝐬 𝐧𝐨𝐰 𝐚𝐜𝐭𝐢𝐯𝐞`
+        `🔷 *${this.client.util.capitalize(type)}* 𝐢𝐬 𝐧𝐨𝐰 𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝`
       );
     }
     await this.client.DB.group.updateOne(
@@ -50,7 +50,7 @@ export default class Command extends BaseCommand {
       { $set: { [type]: true } }
     );
     return void M.reply(
-      `🔷 *${this.client.util.capitalize(type)}* 𝐢𝐬 𝐧𝐨𝐰 𝐚𝐜𝐭𝐢𝐯𝐞`
+      `🔷 *${this.client.util.capitalize(type)}* 𝐢𝐬 𝐧𝐨𝐰 𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝`
     );
   };
 }
